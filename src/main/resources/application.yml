@@ -1,0 +1,27 @@
+logging:
+  level:
+    web: debug
+    org.springframework.security.web.FilterChainProxy: debug
+    reactor.netty: trace
+    io.netty: trace    
+    
+management:
+  endpoint:
+    info:
+      enabled: true
+    env:
+      enabled: true
+    metrics:
+      enabled: true
+    conditions:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+        - info
+        - env
+        - metrics
+        - conditions
+        
+server:  port: 8443
